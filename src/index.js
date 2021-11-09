@@ -7,11 +7,11 @@ function handleServer(req, res) {
 
   if (url === "/welcome") {
     res.writeHead(200, { "content-type": "text/plain" });
-    res.send("Welcome to Dominos!");
+    res.write("Welcome to Dominos!");
     res.end();
   } else if (url === "/contact") {
     res.writeHead(200, { "content-type": "application/json" });
-    res.send({
+    res.write({
       phone: "18602100000",
       email: "guestcaredominos@jublfood.com",
     });
